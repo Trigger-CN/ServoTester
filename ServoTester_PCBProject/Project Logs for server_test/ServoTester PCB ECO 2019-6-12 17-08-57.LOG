@@ -1,0 +1,10 @@
+Change Component DesignItemId : Designator=K1 Old DesignItemId=KEY-2 New DesignItemId=SW-PB
+Change Component Footprint: Designator=K2 Old Footprint=开关按键_HY-S2 4.5mm*4.5mm*3.8mm New Footprint=开关按键_12*12*4.3mm
+Change Component Footprint: Designator=K3 Old Footprint=开关按键_HY-S2 4.5mm*4.5mm*3.8mm New Footprint=开关按键_12*12*4.3mm
+Change Component Footprint: Designator=K1 Old Footprint=开关按键_HY-S2 4.5mm*4.5mm*3.8mm New Footprint=开关按键_SKQG
+Change Component Comment : Designator=K1 Old Comment=key New Comment=SKRP
+Change Component Comment : Designator=K2 Old Comment=key New Comment=SKRP
+Change Component Comment : Designator=K3 Old Comment=key New Comment=SKRP
+Change Component Designator: OldDesignator=S1 NewDesignator=P2
+Change Component Designator: OldDesignator=S2 NewDesignator=P3
+Change Component Designator: OldDesignator=S3 NewDesignator=P4

@@ -1,0 +1,15 @@
+Added Component: Designator=U3(Display_OLED 6432 14pin)
+Added Pin To Net: NetName=NetC8_2 Pin=U3-1
+Added Pin To Net: NetName=NetC8_1 Pin=U3-2
+Added Pin To Net: NetName=NetC9_2 Pin=U3-3
+Added Pin To Net: NetName=NetC9_1 Pin=U3-4
+Added Pin To Net: NetName=3V3 Pin=U3-5
+Added Pin To Net: NetName=GND Pin=U3-7
+Added Pin To Net: NetName=3V3 Pin=U3-8
+Added Pin To Net: NetName=RES# Pin=U3-9
+Added Pin To Net: NetName=SCL Pin=U3-10
+Added Pin To Net: NetName=SDA Pin=U3-11
+Added Pin To Net: NetName=NetR8_2 Pin=U3-12
+Added Pin To Net: NetName=NetC11_2 Pin=U3-13
+Added Pin To Net: NetName=NetC12_2 Pin=U3-14
+Added Member To Class: ClassName=Server_test Member=Component U3 OLED 6432

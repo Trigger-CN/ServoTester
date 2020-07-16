@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND Pin=RP1-1
+Removed Pin From Net: NetName=RPOT Pin=RP1-2
+Removed Pin From Net: NetName=3V3 Pin=RP1-3
+Removed Member From Class: ClassName=Server_test Member=RP1
+Added Component: Designator=P6(HDR1X3)
+Added Pin To Net: NetName=GND Pin=P6-1
+Added Pin To Net: NetName=RPOT Pin=P6-2
+Added Pin To Net: NetName=3V3 Pin=P6-3
+Added Member To Class: ClassName=Server_test Member=Component P6 Header 3

@@ -1,0 +1,9 @@
+Added Component: Designator=D3(LED_0603)
+Added Component: Designator=R9(µç×è_R0603)
+Added Pin To Net: NetName=GND Pin=D3-K
+Added Pin To Net: NetName=3V3 Pin=R9-1
+Added Pin To Net: NetName=NetD3_A Pin=D3-A
+Added Pin To Net: NetName=NetD3_A Pin=R9-2
+Added Net: Name=NetD3_A
+Added Member To Class: ClassName=Server_test Member=Component D3 red
+Added Member To Class: ClassName=Server_test Member=Component R9 1K

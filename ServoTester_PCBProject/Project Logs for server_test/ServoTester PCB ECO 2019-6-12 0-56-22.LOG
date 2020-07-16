@@ -1,0 +1,5 @@
+Added Component: Designator=Q1(MOS_SOT-23)
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=S_REV Pin=Q1-2
+Added Pin To Net: NetName=GND Pin=Q1-3
+Added Member To Class: ClassName=Server_test Member=Component Q1 AON6512

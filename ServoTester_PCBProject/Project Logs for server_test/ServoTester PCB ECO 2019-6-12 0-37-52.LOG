@@ -1,0 +1,6 @@
+Added Component: Designator=Y1(¾§Õñ_5032)
+Added Pin To Net: NetName=GND Pin=Y1-0
+Added Pin To Net: NetName=GND Pin=Y1-0
+Added Pin To Net: NetName=OSC_IN Pin=Y1-1
+Added Pin To Net: NetName=OSC_OUT Pin=Y1-2
+Added Member To Class: ClassName=Server_test Member=Component Y1 8M
