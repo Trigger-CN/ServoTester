@@ -1,0 +1,133 @@
+//#include "FileGroup.h"
+//#include "Servo.h"
+//#include "CommonMacro.h"
+//#include "Adafruit_SSD1306.h"
+
+//#define SCREEN_CLASS Adafruit_SSD1306
+
+//#define LED_Pin PA7
+//#define KEY1_Pin PA6
+//#define KEY2_Pin PA5
+//#define Knob_Pin PA0
+//#define SignOut_Pin	PA4
+
+//SCREEN_CLASS screen(-1);
+
+//Servo sign;
+
+//void Task_ScreenDisplay()
+//{
+//	screen.display();
+//}
+
+//void Init_Display()
+//{
+//	__LoopExecute(Wire.begin(), 50);
+//    screen.begin(SSD1306_SWITCHCAPVCC);
+//	screen.fillScreen(screen.White);
+//    screen.setTextSize(1);
+//    screen.setTextColor(screen.White, screen.Black);
+//}
+
+//void setup()
+//{
+//    pinMode(KEY1_Pin, INPUT_PULLUP);
+//    pinMode(KEY2_Pin, INPUT_PULLUP);
+//    pinMode(Knob_Pin, INPUT_ANALOG);
+//	PWM_Init(LED_Pin, 180, 1000);
+//    sign.attach(SignOut_Pin);
+//	
+//	Init_Display();
+//	screen.setCursor(10, 10);
+//	screen.print("FUCK OFF");
+//	screen.display();
+//}
+
+//float angle;
+
+//void loop()
+//{
+//    angle = __Map(analogRead(Knob_Pin), 0, 4095, 0.0, 180.0);
+//	analogWrite(LED_Pin, 180 - angle);
+//	sign.write(angle);
+//}
+
+///**
+//  * @brief  Main Function
+//  * @param  None
+//  * @retval None
+//  */
+//int main(void)
+//{
+//    Delay_Init();
+//    ADCx_Init(ADC1);
+////	ADCx_DMA_Init();
+//    setup();
+//    for(;;)loop();
+//}
+
+#include "FileGroup.h"
+
+#include <Wire.h>
+
+void setup()
+{
+  Wire.begin();
+
+  Serial.begin(115200);
+  Serial.println("\nI2C Scanner");
+}
+
+uint8_t addr;
+
+void loop()
+{
+  byte error, address;
+  int nDevices;
+
+  Serial.println("Scanning...");
+
+  nDevices = 0;
+  for (address = 1; address < 127; address++ )
+  {
+    // The i2c_scanner uses the return value of
+    // the Write.endTransmisstion to see if
+    // a device did acknowledge to the address.
+    Wire.beginTransmission(address);
+    error = Wire.endTransmission();
+
+    if (error == 0)
+    {
+      Serial.print("I2C device found at address 0x");
+      if (address < 16)
+        Serial.print("0");
+      Serial.print(address, HEX);
+      Serial.println(" !");
+		addr = address;
+      nDevices++;
+    }
+    else if (error == 4)
+    {
+      Serial.print("Unknow error at address 0x");
+      if (address < 16)
+        Serial.print("0");
+      Serial.println(address, HEX);
+    }
+  }
+  if (nDevices == 0)
+    Serial.println("No I2C devices found\n");
+  else
+    Serial.println("done\n");
+
+  delay(1000); // wait 5 seconds for next scan
+}
+
+int main(void)
+{
+	Delay_Init();
+	ADCx_Init(ADC1);
+//	ADCx_DMA_Init();
+	setup();
+	for(;;)loop();
+}
+
